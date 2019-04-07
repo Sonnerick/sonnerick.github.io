@@ -1,0 +1,409 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    /*outline: 1px solid lightgray;*/
+    background: rgb(67, 51, 87);
+
+    margin: 0;
+    min-height: 100%;
+    font-size: 20px;
+}
+
+.menu-games-container
+{
+    background: rgba(255, 255, 255, 1);
+}
+
+.cards-container
+{
+    background: rgba(229, 228, 234, 1);
+}
+
+.header
+{
+    /* outline: 1px solid lightgray; */
+    /* background: rgba(109, 91, 117, 0.5); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    width: 1140px;
+    margin: 0 auto 0 auto;
+}
+
+.social-block a
+{
+    color: white;
+    /*text-decoration: none;*/
+
+    /*border-bottom: 1px solid white;*/
+}
+
+.social-block ul
+{
+    list-style: none;
+    margin: 0;
+}
+
+.social-block li
+{
+    display: inline-block;
+    margin: 0 30px 0 30px;
+}
+
+.social-block li:hover .contacts::before
+{
+    filter: brightness(125%) drop-shadow(0 0 4px lightgray);
+}
+
+.social-block li a
+{
+    /*outline: 1px solid lightgray;*/
+    font-size: 13px;
+    color: #e4e3e9;
+}
+
+.social-block .contacts::before
+{
+    /*outline: 1px solid lightgray;*/
+
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+    vertical-align: middle;
+
+    background: url("/img/Cheap-Icons.png") no-repeat;
+    transition: all 150ms;
+}
+
+.contacts.skype::before
+{
+    background-position-x: -28px
+}
+
+.contacts.chat::before
+{
+    background-position-x: -56px
+}
+
+.info-block
+{
+    /*outline: 1px solid gray;*/
+    /* background: rgba(255, 255, 255, 1); */
+
+    height: 120px;
+    width: 1140px;
+    margin: 0 auto 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 5px 0px 5px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.info-block:hover
+{
+    outline: 1px solid gray;
+    background: rgb(224, 224, 224);
+}
+
+.info-block a
+{
+    font-size: 20px;
+    color: #433357;
+    text-decoration: none;
+    border-bottom: 1px solid #433357;
+}
+
+.info-block a:hover
+{
+    filter: brightness(150%);
+}
+
+.games
+{
+    /* outline: 1px solid gray; */
+    /* background: rgba(255, 255, 255, 1); */
+
+    height: 440px;
+    width: 1140px;
+    margin: 0 auto 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.game-card
+{
+    /*outline: 1px solid gray;*/
+    text-align: center;
+    margin-bottom: 2px;
+
+    width: 205px;
+    height: 140px;
+    position: relative;
+}
+
+.game-card a
+{
+    /*outline: 1px solid gray;*/
+    color: #433357;
+    font-size: 13px;
+    margin: 0;
+}
+
+.game-card span
+{
+    /*outline: 1px solid gray;*/
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+.game-card .img
+{
+    font-size: 0;
+    transition: all 250ms;
+}
+
+.game-card img
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: 205px;
+    margin: 0;
+    border: 1px solid #3f3e3e;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .85);
+}
+
+.game-card .img:hover
+{
+    filter: brightness(120%);
+}
+
+.game-card .img:hover ~ .game-card-info .item-name
+{
+    color: #6e538f;
+}
+
+.game-card-info .item-name
+{
+    text-decoration: underline;
+}
+
+.game-card-info .item-name:hover ~ .game-card img
+{
+    filter: brightness(120%);
+}
+
+.game-card .game-card-info
+{
+    margin-top: 80px;
+}
+
+.game-card .price
+{
+    font-weight: bold;
+}
+
+.cards
+{
+    /* outline: 1px solid gray; */
+    /* background: rgba(229, 228, 234, 1); */
+
+    height: 690px;
+    width: 1140px;
+    margin: 0 auto 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 35px 13px 0 13px;
+    box-sizing: border-box;
+}
+
+.cards .card
+{
+    border: 1px solid #c7c7cf;
+    border-radius: 5px;
+    background-color: white;
+
+    width: 206px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    transition: all 250ms;
+}
+
+.cards .card img
+{
+    width: 100%;
+
+    border-radius: 4px 4px 0 0;
+    transition: all 250ms;
+}
+
+.cards .card:hover
+{
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .85);
+}
+
+.cards .card:hover img
+{
+    filter: brightness(125%);
+}
+
+.card-info
+{
+    padding: 0px 5px 0 5px;
+}
+
+.card-info h2
+{
+    /*outline: 1px solid lightgray;*/
+    font-size: 13px;
+    color: #433357;
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
+}
+
+.card-info p
+{
+    /*outline: 1px solid lightgray;*/
+    font-size: 13px;
+    color: #777784;
+    /*height: 60px;*/
+}
+
+.price-block
+{
+    outline: 1px solid lightgray;
+    background-color: #ECEBF1;
+
+    margin-top: auto;
+    height: 30px;
+    text-align: right;
+    padding: 4px;
+    border-radius: 0 0 5px 5px;
+}
+
+.price-block .price
+{
+    color: #433357;
+    font-weight: bold;
+}
+
+.footer
+{
+    /*outline: 1px solid lightgray;*/
+    /*background: rgba(109, 91, 117, 0.5);*/
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 1140px;
+    margin: 0 auto 0 auto;
+}
+
+.footer .info-block
+{
+    /*outline: 1px solid lightgray;*/
+
+    justify-content: center;
+    height: 90px;
+
+    margin-bottom: 0;
+}
+
+.footer .info-block a
+{
+    font-size: 20px;
+    color: white;
+
+    border-bottom: 1px solid white;
+    margin: 0px 30px 0px 30px;
+}
+
+.footer .info-block a:hover
+{
+    filter: brightness(75%);
+}
+
+.footer .social-block
+{
+    margin-bottom: 40px;
+}
+
+.footer .social-block a
+{
+    font-size: 24px;
+}
+
+.pay-methods
+{
+    /*outline: 1px solid lightgray;*/
+
+    height: 32px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Pay
+{
+    /*outline: 1px solid lightgray;*/
+
+    width: 50px;
+    height: 30px;
+
+    background: url("/img/Payment.png") no-repeat;
+    margin: 0px 4px 0px 4px;
+}
+
+.Pay.YandexMoney
+{
+    background-position-x: -57px;
+}
+
+.Pay.Qiwi
+{
+    background-position-x: -114px;
+}
+
+.Pay.MasterCard
+{
+    background-position-x: -171px;
+}
+
+.Pay.Visa
+{
+    background-position-x: -228px;
+}
